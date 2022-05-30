@@ -1,20 +1,21 @@
-
-/*
-8 20 * * * jd_19E_PZ.js
-
-变量：export PZ="助力码"
-*/
-
-if (process.env.DY_19E != "true") {
-    console.log('\n默认不运行,设置变量export DY_19E="true"来运行\n')
+if (process.env.JD_19E != "true") {
+    console.log('\n默认不运行,安全性自行衡量,设置变量export JD_19E="true"来运行\n')
     return
 }
 
-const $ = new Env('热爱奇旅膨胀红包助力');
+/*
+11 20 * * * jd_19EPZ_help.js
+
+变量：
+export PZ="助力码"
+*/
+
+const $ = new Env('热爱奇旅膨胀内部互助');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let cookiesArr = [], cookie = '', message;
 let secretp='',inviteId=[]
 let helpnum=3;
+//助力码
 let inviteId1='';
 
 if ($.isNode()) {
@@ -35,7 +36,7 @@ $.inviteId.push(inviteId1);
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
   }
-  console.log(`\n请设置需要被助力的变量：export PZ="助力码"`);
+  console.log(`\n变量：export PZ="助力码"`);
   $.inviteIdCodesArr = {}
   for (let i = 0; i < cookiesArr.length && true; i++) {
     if (cookiesArr[i]) {
